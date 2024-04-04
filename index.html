@@ -74,14 +74,14 @@
 ]; // Add more image names as needed
 
         // Base URL of your GitHub repository
-        var baseUrl = "https://github.com/QuintessenceCoding/cotton-road/blob/main/images/";
+        var baseUrl = "https://github.com/QuintessenceCoding/cotton-road-images/blob/main/images/";
 
         // Function to create <img> tags and append them to the image container
         function loadImages() {
             var container = document.getElementById("imageContainer");
 
             imageNames.forEach(function(name) {
-                var imageUrl = baseUrl + name + ".jpg"; // Adjust the file extension as needed
+                var imageUrl = baseUrl + name + ".jpg?raw=true"; // Adjust the file extension as needed
                 var img = document.createElement("img");
                 img.src = imageUrl;
                 img.alt = name; // Use the image name as alternative text

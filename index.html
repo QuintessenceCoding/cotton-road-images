@@ -1,4 +1,96 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Image Gallery</title>
+</head>
+<body>
+    <h1>My Image Gallery</h1>
+    
+    <div id="imageContainer"></div>
 
+    <script>
+        // Array of image file names (without the file extension)
+        var imageNames = ["RAJAT AGRAWAL",
+    "HARSH BANSAL",
+    "KHUSHI SHARMA",
+    "ANKITA YADAV",
+    "ABHIJEET YADAV",
+    "ISHIKA VASHISHT",
+    "ADITYA MAVAI",
+    "ANIRUDDHA SINGH",
+    "PRAKHAR CHANDRA",
+    "ARCHI AWANA",
+    "SUMIT BHATI",
+    "DAKSH GUPTA",
+    "VARSHIT PRATAP SINGH BHADAURIA",
+    "SNEHA DAWAR",
+    "SHASHWAT RAJ",
+    "ATHAR QURESHI",
+    "ANKUSH KUMAR CHHONKER",
+    "SANDEEP RAJ",
+    "MOHAMMAD ASHRAN KHAN",
+    "CHETAN CHAUHAN",
+    "NANCY SHERAWAT",
+    "AMIT KUMAR",
+    "BHAVYA MANSHARAMANI",
+    "DEVANSH GAUR",
+    "SUJAL SRIVASTAVA",
+    "KUNAL PRATAP SINGH",
+    "HARSH SRIVASTAVA",
+    "AARNAV GOYAL",
+    "SHUBHAM KUMAR JHA",
+    "RAHUL",
+    "ADARSH KUMAR",
+    "VARUN CHAUHAN",
+    "RADHA KRISHNA",
+    "FAIZAN AHMAD",
+    "RAGHAV NAITHANI",
+    "ANSHUL",
+    "RIYANSHI TYAGI",
+    "NIRANJAN KUMAR",
+    "MEET PATEL",
+    "SAMAR AHMAD",
+    "RITIK SINGH",
+    "SWATI SOOTHA",
+    "AKLAVYA RAJ",
+    "SAURAV KUMAR",
+    "AMAN SINGH",
+    "AMAN PAL",
+    "SARANSH SRIVASTAVA",
+    "SHREYA SINGH",
+    "AMAN JAISWAL",
+    "NIKHIL NARWAT",
+    "GAURAV",
+    "SIDDHARTH GUPTA",
+    "NITIN GUPTA",
+    "RAGHAV GOEL",
+    "MRITYUNJAY SINGH",
+    "PRATYUSH VERMA",
+    "AYUSH PRATAP SINGH",
+    "SYED ABBAS HASAN",
+    "YUVRAJ SINGH CHAUHAN"
+]; // Add more image names as needed
 
+        // Base URL of your GitHub repository
+        var baseUrl = "https://github.com/QuintessenceCoding/cotton-road/blob/main/images/";
+
+        // Function to create <img> tags and append them to the image container
+        function loadImages() {
+            var container = document.getElementById("imageContainer");
+
+            imageNames.forEach(function(name) {
+                var imageUrl = baseUrl + name + ".jpg"; // Adjust the file extension as needed
+                var img = document.createElement("img");
+                img.src = imageUrl;
+                img.alt = name; // Use the image name as alternative text
+                container.appendChild(img);
+            });
+        }
+
+        // Call the loadImages function when the page loads
+        window.onload = loadImages;
+    </script>
+</body>
 </html>
